@@ -1,4 +1,4 @@
-# MonkeyIsland
+# The Secret of Monkey Island - The Text Adventure
 
 A small browser-based adventure/demo built with plain HTML, CSS and JavaScript.
 
