@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Secret of Monkey Island — A Text Adventure</title>
+  <link href="https://fonts.cdnfonts.com/css/zx-spectrum-7" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="crt-overlay"></div>
+
+  <div id="game-container">
+    <!-- Title bar -->
+    <div id="title-bar">THE SECRET OF MONKEY ISLAND</div>
+
+    <!-- Main content area -->
+    <div id="main-area">
+      <!-- Room graphics canvas (ZX Spectrum 256×192) -->
+      <canvas id="room-canvas"></canvas>
+
+      <!-- Scrollback / output area -->
+      <div id="output" role="log" aria-live="polite"></div>
+
+      <!-- Input line -->
+      <div id="input-line">
+        <span id="prompt">&gt;&nbsp;</span>
+        <input type="text" id="command-input" autocomplete="off" autofocus
+               spellcheck="false" aria-label="Enter command">
+      </div>
+    </div>
+
+    <!-- Status bar -->
+    <div id="status-bar">
+      <span id="status-location"></span>
+      <span id="status-exits"></span>
+      <span id="status-score"></span>
+    </div>
+  </div>
+
+  <!-- Data files (content — created separately by LeChuck) -->
+  <script src="js/data/rooms.js"></script>
+  <script src="js/data/items.js"></script>
+  <script src="js/data/npcs.js"></script>
+  <script src="js/data/puzzles.js"></script>
+  <script src="js/data/insults.js"></script>
+  <script src="js/data/dialogue.js"></script>
+
+  <!-- Graphics engine (before other engine files) -->
+  <script src="js/graphics.js"></script>
+
+  <!-- ZX Spectrum beeper music engine (before loader) -->
+  <script src="js/beeper.js"></script>
+
+  <!-- Loading animation (before engine) -->
+  <script src="js/loader.js"></script>
+
+  <!-- Engine files (load order matters) -->
+  <script src="js/ui.js"></script>
+  <script src="js/dialogue.js"></script>
+  <script src="js/combat.js"></script>
+  <script src="js/engine.js"></script>
+</body>
+</html>
